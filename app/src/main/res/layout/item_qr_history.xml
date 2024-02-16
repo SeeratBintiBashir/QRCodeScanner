@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:background="@drawable/bg_curve"
+    android:layout_margin="6dp"
+
+    >
+    <TextView
+        android:id="@+id/qrResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/GV1"
+        android:padding="10dp"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/black"
+        android:text="Random QR Code Generator
+FAQ What is a QR Code? A Quick Response Code (QR Code), when scanned, can tell the device scanning the QR code on how to handle it. This could be instructing the device to open a web page, send an email, or sharing a username/password for a Wi-Fi hotspot, to name a few. How do I scan a QR Code?"
+        />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/GV1"
+        android:padding="10dp"
+        android:fontFamily="@font/ubuntu"
+        android:lineSpacingExtra="0.4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qrResult"
+
+
+
+        android:textColor="@color/black"
+        android:text="06:06:08 PM"
+        />
+      <ImageView
+          android:id="@+id/iconExpamd"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/icon_expamd"
+          android:layout_marginTop="6dp"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintLeft_toRightOf="@id/GV1"
+
+          />
+
+       <LinearLayout
+           android:layout_width="3dp"
+           android:layout_height="0dp"
+           android:background="@color/lightBlue"
+           app:layout_constraintLeft_toRightOf="@id/GV1"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+
+           />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
