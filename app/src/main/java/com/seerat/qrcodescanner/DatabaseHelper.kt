@@ -35,6 +35,10 @@ class DatabaseHelper(context: Context) :
         db?.execSQL(dropTableQuery)
         onCreate(db)
     }
+    fun open(){
+        val db = this.writableDatabase
+    }
+
 
     fun addScannedQR(scannedQr: ScannedQR){
         val db = this.writableDatabase
@@ -95,11 +99,11 @@ class DatabaseHelper(context: Context) :
         db.close()
     }
 
-    fun removeAllScannedQR(Id: Int){
+    fun removeAllScannedQR(){
         val db = writableDatabase
-        val query = "SELECT * FROM $TABLE_NAME"
-        db.delete(TABLE_NAME, query, null)
+        db.delete(TABLE_NAME, null, null)
         db.close()
     }
+
 
 }

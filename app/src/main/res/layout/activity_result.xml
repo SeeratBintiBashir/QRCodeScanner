@@ -13,22 +13,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <include
-        android:id="@+id/scanresultbar"
-        layout="@layout/scanresultbar"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/GH1"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         tools:listitem="@layout/item_qr_result"
-        app:layout_constraintTop_toBottomOf="@id/scanresultbar"
-        app:layout_constraintBottom_toTopOf="@id/bottombar"
-        />
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottombar">
+
+        <TextView
+            android:id="@+id/tv_scan_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntu"
+            android:textSize="16sp"/>
+        </LinearLayout>
 
     <include
         android:id="@+id/bottombar"
